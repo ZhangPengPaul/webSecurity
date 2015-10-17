@@ -1,0 +1,13 @@
+#{extends 'main.html' /}
+#{set title:'XSS Demo' /}
+
+<script type="text/javascript">
+    function test() {
+        var str = document.getElementById("text").value;
+        document.getElementById("t").innerHTML = "<a href='" + str + "'>testLink</a>";
+    }
+</script>
+
+<div id="t"></div>
+<input type="text" id="text" value=""/>
+<input type="button" id="s" value="写入" onclick="test()"/>
