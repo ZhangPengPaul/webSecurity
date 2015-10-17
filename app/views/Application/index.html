@@ -1,4 +1,7 @@
 #{extends 'main.html' /}
 #{set title:'Home' /}
 
-#{welcome /}
+<div><a href="/xssDemo?param=HelloWorld!">不含XSS的正常链接</a></div>
+<div><a href="/xssDemo?param=<script>alert(/xss/)</script>">含XSS的链接</a></div>
+<div><a href="/storageXSS">持久型XSS</a></div>
+<div><a href="/dombased">Dom Based XSS</a></div>

@@ -5,6 +5,10 @@
 # Home page
 GET     /                                       Application.index
 
+GET     /xssDemo                                XSSController.xssDemo
+GET     /storageXSS                             XSSController.storageXssDemo
+GET     /dombased                               XSSController.domBased
+
 # Ignore favicon requests
 GET     /favicon.ico                            404
 
